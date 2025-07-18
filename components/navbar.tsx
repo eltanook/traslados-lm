@@ -47,7 +47,7 @@ export function Navbar() {
           <div className="hidden md:flex items-center gap-4 ml-8">
             <ThemeToggle />
             <Button size="sm" className="bg-brand-orange hover:bg-brand-orange/90 text-white" asChild>
-              <Link href="https://wa.link/2214773262" target="_blank">
+              <Link href="https://wa.me/5492212227966" target="_blank">
                 Enviar mensaje
               </Link>
             </Button>
@@ -88,7 +88,7 @@ export function Navbar() {
                 Contacto
               </Link>
               <Button size="sm" className="bg-brand-orange hover:bg-brand-orange/90 text-white w-fit" asChild>
-                <Link href="https://wa.link/2214773262" target="_blank">
+                <Link href="https://wa.me/5492212227966" target="_blank">
                   Enviar mensaje
                 </Link>
               </Button>

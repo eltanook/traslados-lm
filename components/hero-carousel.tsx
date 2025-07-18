@@ -67,7 +67,7 @@ export function HeroCarousel() {
               className="bg-brand-orange hover:bg-brand-orange/90 text-white px-6 sm:px-8 py-3 text-base sm:text-lg"
               asChild
             >
-              <Link href="https://wa.link/2214773262" target="_blank">
+              <Link href="https://wa.me/5492212227966" target="_blank">
                 <Phone className="mr-2 h-4 sm:h-5 w-4 sm:w-5" />
                 Reservar Ahora
               </Link>
