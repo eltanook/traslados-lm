@@ -40,9 +40,9 @@ export function HeroCarousel() {
 
   return (
     <section className="relative h-screen flex items-center justify-center overflow-hidden">
-      {/* Background with attachment fixed effect */}
+      {/* Background - mobile-friendly approach */}
       <div
-        className="absolute inset-0 bg-cover bg-center bg-fixed"
+        className="absolute inset-0 bg-cover bg-center"
         style={{
           backgroundImage: `url('/hero.jpg')`,
         }}

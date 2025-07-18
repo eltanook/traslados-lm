@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
@@ -10,15 +10,20 @@ import { useTheme } from "next-themes"
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
+  const [mounted, setMounted] = useState(false)
   const { theme, resolvedTheme } = useTheme()
   
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+  
   const currentTheme = theme === "system" ? resolvedTheme : theme
-  const logoSrc = currentTheme === "dark" ? "/logo2.png" : "/logo1.png"
+  const logoSrc = mounted && currentTheme === "dark" ? "/logo2.png" : "/logo1.png"
 
   return (
     <nav className="fixed top-0 w-full z-50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b">
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-start h-16">
+        <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2">
             <Image
@@ -26,12 +31,12 @@ export function Navbar() {
               alt="Traslados L.M."
               width={180}
               height={60}
-              className="h-12 w-auto"
+              className="h-10 sm:h-12 w-auto"
             />
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8 ml-auto">
+          <div className="hidden md:flex items-center gap-8">
             <Link href="/" className="text-sm font-medium hover:text-brand-orange transition-colors">
               Inicio
             </Link>
@@ -44,7 +49,7 @@ export function Navbar() {
           </div>
 
           {/* Desktop Actions */}
-          <div className="hidden md:flex items-center gap-4 ml-8">
+          <div className="hidden md:flex items-center gap-4">
             <ThemeToggle />
             <Button size="sm" className="bg-brand-orange hover:bg-brand-orange/90 text-white" asChild>
               <Link href="https://wa.me/5492212227966" target="_blank">
@@ -53,7 +58,7 @@ export function Navbar() {
             </Button>
           </div>
 
-          {/* Mobile Menu Button */}
+          {/* Mobile Actions */}
           <div className="md:hidden flex items-center gap-2">
             <ThemeToggle />
             <Button variant="ghost" size="sm" onClick={() => setIsOpen(!isOpen)}>
