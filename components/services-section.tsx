@@ -132,66 +132,66 @@ export function ServicesSection() {
             
             return (
               <Card key={index} className="overflow-hidden hover:shadow-xl transition-all duration-300">
-                <div className="grid lg:grid-cols-3 gap-0">
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-0">
                   {/* Contenido principal */}
-                  <div className="lg:col-span-2 p-8">
-                    <CardHeader className="p-0 mb-6">
-                      <div className="flex items-start justify-between mb-4">
-                        <div className="flex items-center gap-3">
-                          <div className="p-3 rounded-full bg-brand-orange/10">
-                            <service.icon className="h-6 w-6 text-brand-orange" />
+                  <div className="lg:col-span-2 p-4 sm:p-6 lg:p-8">
+                    <CardHeader className="p-0 mb-4 sm:mb-6">
+                      <div className="flex flex-col sm:flex-row sm:items-start justify-between mb-4">
+                        <div className="flex items-center gap-3 mb-3 sm:mb-0">
+                          <div className="p-2 sm:p-3 rounded-full bg-brand-orange/10 flex-shrink-0">
+                            <service.icon className="h-5 w-5 sm:h-6 sm:w-6 text-brand-orange" />
                           </div>
-                          <div>
-                            <div className="flex items-center gap-3 mb-2">
-                              <div className="flex items-center bg-muted/50 rounded-lg p-2">
-                                <div className="w-36 text-center">
-                                  <span className="text-lg font-semibold">{currentOrigin}</span>
+                          <div className="flex-1 min-w-0">
+                            <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-3 mb-2">
+                              <div className="flex items-center bg-muted/50 rounded-lg p-2 overflow-hidden">
+                                <div className="flex-1 min-w-0 text-center">
+                                  <span className="text-sm sm:text-lg font-semibold truncate block">{currentOrigin}</span>
                                 </div>
                                 <Button
                                   variant="ghost"
                                   size="sm"
                                   onClick={() => handleToggle(service.id)}
-                                  className="h-8 w-8 p-0 mx-2 hover:bg-brand-orange/10 transition-colors flex-shrink-0"
+                                  className="h-6 w-6 sm:h-8 sm:w-8 p-0 mx-1 sm:mx-2 hover:bg-brand-orange/10 transition-colors flex-shrink-0"
                                   title="Cambiar dirección del viaje"
                                 >
-                                  <ArrowLeftRight className="h-4 w-4 text-brand-orange" />
+                                  <ArrowLeftRight className="h-3 w-3 sm:h-4 sm:w-4 text-brand-orange" />
                                 </Button>
-                                <div className="w-56 text-center">
-                                  <span className="text-lg font-semibold">{currentDestination}</span>
+                                <div className="flex-1 min-w-0 text-center">
+                                  <span className="text-sm sm:text-lg font-semibold truncate block">{currentDestination}</span>
                                 </div>
                               </div>
                             </div>
-                            <p className="text-xs text-muted-foreground mt-1">
+                            <p className="text-xs text-muted-foreground">
                               💡 Click en la flecha para cambiar dirección del viaje
                             </p>
                           </div>
                         </div>
                       </div>
-                      <CardDescription className="text-base leading-relaxed">{service.description}</CardDescription>
+                      <CardDescription className="text-sm sm:text-base leading-relaxed">{service.description}</CardDescription>
                     </CardHeader>
 
                     <CardContent className="p-0">
-                      <div className="grid md:grid-cols-2 gap-6 mb-6">
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 mb-4 sm:mb-6">
                         <div>
-                          <h4 className="font-semibold mb-3">Características incluidas:</h4>
+                          <h4 className="font-semibold mb-3 text-sm sm:text-base">Características incluidas:</h4>
                           <ul className="space-y-2">
                             {service.features.map((feature, idx) => (
-                              <li key={idx} className="flex items-center gap-2 text-sm">
-                                <div className="w-1.5 h-1.5 bg-brand-orange rounded-full" />
-                                {feature}
+                              <li key={idx} className="flex items-center gap-2 text-xs sm:text-sm">
+                                <div className="w-1 h-1 sm:w-1.5 sm:h-1.5 bg-brand-orange rounded-full flex-shrink-0" />
+                                <span className="truncate">{feature}</span>
                               </li>
                             ))}
                           </ul>
                         </div>
 
-                        <div className="space-y-4">
+                        <div className="space-y-3 sm:space-y-4">
                           <div className="flex items-center gap-2">
-                            <Clock className="h-4 w-4 text-brand-orange" />
-                            <span className="text-sm">Duración: {service.duration}</span>
+                            <Clock className="h-3 w-3 sm:h-4 sm:w-4 text-brand-orange flex-shrink-0" />
+                            <span className="text-xs sm:text-sm">Duración: {service.duration}</span>
                           </div>
                           <div className="flex items-center gap-2">
-                            <Users className="h-4 w-4 text-brand-orange" />
-                            <span className="text-sm">Disponible: {service.availability}</span>
+                            <Users className="h-3 w-3 sm:h-4 sm:w-4 text-brand-orange flex-shrink-0" />
+                            <span className="text-xs sm:text-sm">Disponible: {service.availability}</span>
                           </div>
                         </div>
                       </div>
@@ -199,30 +199,31 @@ export function ServicesSection() {
                   </div>
 
                   {/* Panel lateral */}
-                  <div className="bg-muted/50 p-8 flex flex-col justify-center">
-                    <div className="text-center mb-6">
-                      <p className="text-sm text-muted-foreground mb-2">Precio</p>
-                      <p className="text-3xl font-bold text-brand-orange">{service.price}</p>
+                  <div className="bg-muted/50 p-4 sm:p-6 lg:p-8 flex flex-col justify-center">
+                    <div className="text-center mb-4 sm:mb-6">
+                      <p className="text-xs sm:text-sm text-muted-foreground mb-2">Precio</p>
+                      <p className="text-2xl sm:text-3xl font-bold text-brand-orange">{service.price}</p>
                       <p className="text-xs text-muted-foreground mt-1">Peajes incluídos</p>
                     </div>
 
-                    <div className="space-y-3">
+                    <div className="space-y-2 sm:space-y-3">
                       <Button
-                        className="w-full bg-brand-orange hover:bg-brand-orange/90 text-white"
+                        size="sm"
+                        className="w-full bg-brand-orange hover:bg-brand-orange/90 text-white text-sm"
                         onClick={() => handleCalculatePrice(service)}
                       >
                         Reservar Viaje
-                        <ArrowRight className="ml-2 h-4 w-4" />
+                        <ArrowRight className="ml-2 h-3 w-3 sm:h-4 sm:w-4" />
                       </Button>
 
-                      <Button variant="outline" className="w-full bg-transparent" asChild>
+                      <Button size="sm" variant="outline" className="w-full bg-transparent text-sm" asChild>
                         <a href="https://wa.me/5492212227966" target="_blank" rel="noopener noreferrer">
                           Consulta por WhatsApp
                         </a>
                       </Button>
                     </div>
 
-                    <p className="text-xs text-muted-foreground text-center mt-4">
+                    <p className="text-xs text-muted-foreground text-center mt-3 sm:mt-4">
                       Reserva con anticipación para garantizar disponibilidad
                     </p>
                   </div>
