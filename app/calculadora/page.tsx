@@ -143,7 +143,7 @@ export default function ViajesPage() {
                     </div>
                     <div className="text-center p-3 sm:p-4 bg-brand-orange/10 rounded-lg">
                       <p className="text-sm text-muted-foreground">
-                        <strong>¿Ya conocés el precio?</strong> Podés agendar tu llamada cuando quieras en el panel de <span className="lg:inline">la derecha</span><span className="lg:hidden">abajo</span> para coordinar los detalles de tu viaje.
+                        <strong>¿Ya conocés el precio?</strong> Podés reservar tu viaje en el panel de <span className="lg:inline">la derecha</span><span className="lg:hidden">abajo</span>.
                       </p>
                     </div>
                   </div>
