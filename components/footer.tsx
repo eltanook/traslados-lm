@@ -102,11 +102,11 @@ export function Footer() {
               </li>
               <li className="flex items-center gap-2">
                 <Mail className="h-4 w-4 text-brand-orange" />
-                <span className="text-gray-300">viajelosmellis@gmail.com</span>
+                <span className="text-gray-300">traslados.mensajeria@gmail.com</span>
               </li>
               <li className="flex items-center gap-2">
-                <MapPin className="h-4 w-4 text-brand-orange" />
-                <span className="text-gray-300">62 N 1821</span>
+                <MapPin className="shrink-0 h-4 w-4 text-brand-orange" />
+                <span className="text-gray-300">C. 178 6158, Melchor Romero</span>
               </li>
               <li className="flex items-center gap-2">
                 <Clock className="h-4 w-4 text-brand-orange" />

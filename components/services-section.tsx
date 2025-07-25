@@ -15,7 +15,7 @@ const services = [
     destination: "Ezeiza",
     description:
       "Traslado privado disponible las 24 horas hacia el Aeropuerto Internacional de Ezeiza. Reserva flexible y atención personalizada para vuelos internacionales.",
-    features: ["Monitoreo de vuelos", "Asistencia con equipaje", "Tiempo de espera incluido", "Conductores bilingües"],
+    features: ["Monitoreo de vuelos", "Asistencia con equipaje", "Conductores bilingües"],
     duration: "60-90 min",
     availability: "24/7",
     price: "$70.000",
@@ -31,7 +31,6 @@ const services = [
     features: [
       "Servicio puerta a puerta",
       "Seguimiento de vuelos",
-      "Espera sin costo adicional",
       "Vehículos ejecutivos",
     ],
     duration: "45-60 min",
