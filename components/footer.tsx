@@ -118,7 +118,7 @@ export function Footer() {
 
         <div className="border-t border-brand-gray mt-8 pt-8 text-center">
           <p className="text-gray-400 text-sm mb-2">
-            © {new Date().getFullYear()} Traslados L.M. (Los Melliz). Todos los derechos reservados.
+            © {new Date().getFullYear()} Traslados L.M. (Los Mellis). Todos los derechos reservados.
           </p>
           <p className="text-gray-500 text-xs">
             Desarrollado por{" "}
