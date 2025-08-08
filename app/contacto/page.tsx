@@ -186,7 +186,7 @@ export default function ContactoPage() {
                       Teléfono / WhatsApp
                     </p>
                     <p className="text-muted-foreground text-sm sm:text-base">
-                      221 222 79 66
+                      +54 9 221 477-3262
                     </p>
                   </div>
                 </div>
