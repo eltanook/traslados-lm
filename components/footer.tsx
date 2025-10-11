@@ -128,6 +128,13 @@ export function Footer() {
               className="text-brand-orange hover:text-brand-orange/80 transition-colors"
             >
               Nexium Solutions
+            </Link>{" "}y{" "}
+            <Link
+              href="https://ditiero.shop/"
+              target="_blank"
+              className="text-brand-orange hover:text-brand-orange/80 transition-colors"
+            >
+              DiTiero
             </Link>
           </p>
         </div>
