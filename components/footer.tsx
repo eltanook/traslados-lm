@@ -98,15 +98,15 @@ export function Footer() {
             <ul className="space-y-3">
               <li className="flex items-center gap-2">
                 <Phone className="h-4 w-4 text-brand-orange" />
-                <span className="text-gray-300">2212227966</span>
+                <span className="text-gray-300">+54 9 221 477-3262</span>
               </li>
               <li className="flex items-center gap-2">
                 <Mail className="h-4 w-4 text-brand-orange" />
-                <span className="text-gray-300">viajelosmellis@gmail.com</span>
+                <span className="text-gray-300">traslados.mensajeria@gmail.com</span>
               </li>
               <li className="flex items-center gap-2">
-                <MapPin className="h-4 w-4 text-brand-orange" />
-                <span className="text-gray-300">62 N 1821</span>
+                <MapPin className="shrink-0 h-4 w-4 text-brand-orange" />
+                <span className="text-gray-300">C. 178 6158, Melchor Romero</span>
               </li>
               <li className="flex items-center gap-2">
                 <Clock className="h-4 w-4 text-brand-orange" />
@@ -118,7 +118,7 @@ export function Footer() {
 
         <div className="border-t border-brand-gray mt-8 pt-8 text-center">
           <p className="text-gray-400 text-sm mb-2">
-            © {new Date().getFullYear()} Traslados L.M. (Los Melliz). Todos los derechos reservados.
+            © {new Date().getFullYear()} Traslados L.M. (Los Mellis). Todos los derechos reservados.
           </p>
           <p className="text-gray-500 text-xs">
             Desarrollado por{" "}

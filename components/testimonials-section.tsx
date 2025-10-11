@@ -4,6 +4,8 @@ import { useEffect, useState } from "react"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Star, Quote } from "lucide-react"
+import { Button } from "@/components/ui/button"
+import Link from "next/link"
 
 const testimonials = [
   {
@@ -164,6 +166,11 @@ export function TestimonialsSection() {
               />
             ))}
           </div>
+          <div className="flex justify-center mt-8">
+          <Button size="lg" className="bg-brand-orange hover:bg-brand-orange/90 text-white" asChild>
+              <Link target="_blank" href="https://www.google.com.ar/maps/place/Traslados+La+Plata+Ezeiza/@-34.9720295,-58.038709,17z/data=!4m18!1m9!3m8!1s0x95a2c3a5f2d529d7:0x29366124c283aed1!2sTraslados+La+Plata+Ezeiza!8m2!3d-34.9720295!4d-58.0361341!9m1!1b1!16s%2Fg%2F11wbjvpwwf!3m7!1s0x95a2c3a5f2d529d7:0x29366124c283aed1!8m2!3d-34.9720295!4d-58.0361341!9m1!1b1!16s%2Fg%2F11wbjvpwwf?hl=es&entry=ttu&g_ep=EgoyMDI1MDcyOC4wIKXMDSoASAFQAw%3D%3D">Ver más reseñas →</Link>
+            </Button>
+            </div>
         </div>
       </div>
     </section>
